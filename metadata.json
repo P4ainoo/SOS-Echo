@@ -1,0 +1,7 @@
+{
+  "name": "SOS Echo - Secure Incident Reporting",
+  "description": "A secure, open-source incident reporting platform for SOS Children's Villages, featuring local AI urgency detection and a 3-tier workflow.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
