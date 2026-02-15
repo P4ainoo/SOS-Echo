@@ -1,17 +1,20 @@
-# 🛡️ SOS Echo | Hack for Hope 2026
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-> **"Securing Voices, Protecting Futures."**
+# Run and deploy your AI Studio app
 
-SOS Echo is a secure, open-source platform designed to digitize incident reporting for **SOS Children's Villages Tunisia**. It replaces informal oral/paper workflows with an encrypted, traceable, and intelligent digital vault.
+This contains everything you need to run your app locally.
 
-## 🚀 Key Features
-* **🧠 Local AI Triage:** Client-side NLP detects urgency (e.g., "violence", "health") in real-time without external APIs.
-* **🔒 Zero-Knowledge Security:** AES-256 encryption for sensitive descriptions & strict Role-Based Access Control (RBAC).
-* **📱 "Bold & Soft" UX:** A responsive, accessible interface strictly following SOS Brand Guidelines.
-* **🌱 100% Sustainable:** Runs on a simple local server with SQLite. No cloud costs.
+View your app in AI Studio: https://ai.studio/apps/drive/1sbmEB6OsPNo7hYxmw9I5aNBjW-_cCFa7
 
-## 🛠️ Tech Stack
-* **Frontend:** React, Vite, Tailwind CSS
-* **Backend:** Node.js, Express
-* **Database:** SQLite (Sequelize)
-* **AI:** Natural/Sentiment.js (Local execution)
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

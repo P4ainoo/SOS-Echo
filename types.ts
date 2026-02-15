@@ -25,10 +25,14 @@ export interface IncidentReport {
   status: IncidentStatus;
   attachments: string[];
   
-  // Niveau 2 - Analyst fields
-  evaluationSummary?: string;
+  // Niveau 2 - Analyst fields (Clinical Dossier)
+  dpeReport?: string;
+  fullEvaluation?: string;
   actionPlan?: string;
-  expertId?: string;
+  followUpReport?: string;
+  finalReport?: string;
+  closingNotice?: string;
+  currentStep: number; // 1 to 5
   
   // Niveau 3 - Governance fields
   decisionNote?: string;
@@ -41,12 +45,6 @@ export interface IncidentReport {
   isAIDetected?: boolean;
   aggressionScore?: number;
   escalationProbability?: number;
-  thumbnail?: string;
-  observedBehaviors?: string[];
-  detectedFaces?: Array<{
-    box_2d: [number, number, number, number];
-    label: string;
-  }>;
 }
 
 export interface User {
@@ -59,28 +57,14 @@ export interface AIResponse {
   aggression_score: number;
   escalation_probability: number;
   risk_level: UrgencyLevel;
-  escalation_trend: string;
   observed_behaviors: string[];
-  possible_distress_detected: boolean;
   alert_recommended: boolean;
   admin_alert_message: string;
-  confidence_score: number;
   incident_summary: string;
-  detected_faces?: Array<{
-    box_2d: [number, number, number, number];
-    label: string;
-  }>;
 }
 
 export interface AlertLogEntry extends AIResponse {
   id: string;
   timestamp: string;
   imageThumbnail?: string;
-}
-
-export interface SystemStats {
-  activeCameras: number;
-  alertsToday: number;
-  avgConfidence: number;
-  uptime: string;
 }
